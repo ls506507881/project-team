@@ -18,14 +18,23 @@ sequelize
 });
 */
 
-// 1 hello 1111111 2344124
+// 1 hello  XX33AAFF 1111111 2344124
 
 //定义一个表结构
 var Note = sequelize.define('note', {
   text: {
     type: Sequelize.STRING
+  },
+  uid:{
+    type: Sequelize.STRING
   }
 });
+
+//删除掉
+// Note.drop()
+//重新初始化
+// Note.sync({force:true})
+
 
 /*
 //假设这个表不存在，就去创建他;

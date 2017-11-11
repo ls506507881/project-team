@@ -25,9 +25,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({secret: 'xnvknc34iut864u'}));
+//随便写一串数字，作为秘钥
+app.use(session({secret: 'mkfd59r209wmavxq23'}));
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 app.use('/', index);
 app.use('/auth', auth);
